@@ -1,0 +1,41 @@
+"""A video player class."""
+
+from .video_library import VideoLibrary
+
+
+class VideoPlayer:
+    """A class used to represent a Video Player."""
+
+    def __init__(self):
+        self._video_library = VideoLibrary()
+
+    def number_of_videos(self):
+        num_videos = len(self._video_library.get_all_videos())
+        print(f"{num_videos} videos in the library")
+
+
+    def show_all_videos(self):
+        """Returns all videos."""
+        print("Here's a list of all available videos:")
+        print(self._video_title, self._video_id, self._video_tag)
+
+
+    def play_video(self, video_id):
+        """Plays the respective video.
+
+        Args:
+            video_id: The video_id to be played.
+        """
+
+        v_id = []
+        v_id.append = video_id
+
+        for I in range(len(self._video_library.get_all_videos())):
+            if v_id[I] == v_id[I+1]:
+                print("Playing Video", v_id[I])
+            else:
+                print('Stopping Video:', v_id[I])
+                print('Playing Video:', v_id[I+1])
+
+        if video_id != v_id:
+                print('Cannot play video: Video does not exist')
